@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>Vigenère cipher</h1>
+
+        <canvas width="435" height="435" id="polyAlphabet">
+            Tu puto navegador no soporta esta mierda
+        </canvas>
+
+        <section class="cipher">
+            <textarea name="input" id="input" rows="10">INPUT</textarea>
+            <input id="key" type="text" placeholder="KEY">
+            <button id="encrypt">Encrypt</button>
+            <button id="decrypt">Decrypt</button>
+            <textarea name="output" id="output" rows="10">OUTPUT</textarea>
+        </section>
+
+        <script type="module" src="js/canvas.js"></script>
+        <script type="module" src="js/controls.js"></script>
+    </body>
+</html>

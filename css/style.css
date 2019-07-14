@@ -1,0 +1,57 @@
+body {
+    padding: 10px;
+    background-color: #3D3E4C
+}
+
+h1 {
+    color: wheat;
+    text-align: center
+}
+
+#polyAlphabet {
+    display: block;
+    background-color: #111;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    filter: brightness(2)
+}
+
+.cipher {
+    display: block;
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: center
+}
+
+.cipher > * {
+    padding: 10px;
+    border: 0;
+    border-radius: 5px
+}
+
+.cipher > *:not(textarea) {
+    margin: 5px
+}
+
+button#encrypt {
+    color: white;
+    background-color: #0099ff
+}
+
+button#decrypt {
+    color: white;
+    background-color: #ff5e00
+}
+
+.cipher > textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    box-sizing: border-box;
+    resize: none
+}
+
+@media screen and (max-width: 530px) {
+    #polyAlphabet {width: 100%}
+}
