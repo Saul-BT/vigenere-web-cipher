@@ -1,4 +1,4 @@
-var POLYALPHABET = [];
+const POLYALPHABET = [];
 
 export default POLYALPHABET;
 
@@ -11,6 +11,8 @@ for (let row = 0; row < 26; row++) {
 	POLYALPHABET.push(rowLetters);
 }
 
+const reIgnoreChars = /[\s¡!¿?.,()]/;
+
 export function encrypt(key, phrase) {
 	key = key.toUpperCase().replace(/\s/g, '');
 	phrase = phrase.toUpperCase().trim();
@@ -19,7 +21,7 @@ export function encrypt(key, phrase) {
 	for (i = 0, n = 0; i < phrase.length; i++, n++) {
 		let phraseChar = phrase.charAt(i);
 
-		if (/[\s¡!¿?.]/.test(phraseChar)) {
+		if (reIgnoreChars.test(phraseChar)) {
 			encrypted += phraseChar;
 			n--;
 		} else {
@@ -38,7 +40,7 @@ export function decrypt(key, encrypted) {
 		let encryptedChar = encrypted.charAt(i);
 		let lineTarget = POLYALPHABET[key.charCodeAt(n % key.length) - 65];
 
-		if (/[\s¡!¿?.]/.test(encryptedChar)) {
+		if (reIgnoreChars.test(encryptedChar)) {
 			phrase += encryptedChar;
 			n--;
 		} else
