@@ -8,7 +8,10 @@ A web implementation of [Vigenère Cipher](https://en.wikipedia.org/wiki/Vigen%C
 
 ## Screenshot examples
 
-<img src="https://i.imgur.com/vppcbgs.png" width="450px"> <img src="https://i.imgur.com/ywgHGKY.png" width="450px">
+<p align="center">
+  <img src="https://i.imgur.com/vppcbgs.png"/>
+  <img src="https://i.imgur.com/ywgHGKY.png"/>
+</p>
 
 ## License
 
